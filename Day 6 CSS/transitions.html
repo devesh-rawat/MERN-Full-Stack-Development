@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: antiquewhite;
+            width:100vw;
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:15px;
+
+        }
+
+        .box{
+
+            background-color: yellow;
+            border:2px solid red;
+            width:100px;
+            height:100px;
+        }
+        .box:hover{
+            background-color: pink;
+            cursor: pointer;
+            border-radius:150px;
+            height: 200px;
+            width:200px;
+            transition-timing-function: ease-in-out;
+            transition-delay:2s;
+        }
+        #div1{
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5</div>
+    </div>
+    
+</body>
+</html>
