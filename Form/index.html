@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height:96vh;
+            background-color:#f0f0f0;
+        }
+        .form-container{
+            border-radius:10px;
+            box-sizing: border-box;
+            margin-top:24px;
+            height:90vh;
+            width:440px;
+            margin-left: auto;
+            margin-right: auto;
+            padding:10px;
+            background-color: white;
+        }
+        form{
+            height:100%;
+        }
+        fieldset{
+            height:96%;
+            padding:10px;
+            background-color: white;
+        }
+        legend{
+            font-style: italic;
+            font-weight: 900;
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+        label{
+            font-size: 20px;
+            font-weight:48px;
+            /* display: block; */
+            /* border:1px solid red; */
+        }
+        input{
+            height:27px;
+            width:98%;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+           
+            
+        }
+        .sec{
+            margin:10px;
+        }
+       .rad{
+        height:15px;
+        width: 15px;;
+       }
+       textarea{
+        margin:3px;
+        width:97%;
+        border: 1px solid #ccc;
+                border-radius: 4px;
+       }
+       button{
+        width:94%;
+        height:35px;
+        margin-left:12px;
+        cursor: pointer;
+       }
+       .gender{
+        margin-right:10px;
+       }
+    </style>
+</head>
+<body>
+     <div class="form-container">
+        <form action="submit">
+            <fieldset>
+                <legend>User Personal Information</legend>
+                <div class="sec">
+                <label for="name">Enter Your Full Name</label>
+                <input type="text" name="name" id="name">
+                </div>
+                <div class="sec">
+                <label for="email">Enter Your Email</label>
+                <input type="email" name="email" id="email">
+                </div>
+                <div class="sec">
+                    <label for="pass">Enter Your Password</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+                <div class="sec">
+                    <label for="cpass">Confirm Your Password</label>
+                    <input type="password" name="cpass" id="cpass">
+                </div>
+                <div class="sec">
+                    <div><label for="gen">Enter Your Gender </label></div>
+                        <input type="radio" name="gen" id="male" class="rad">
+                        <label for="male" class="gender">Male</label>
+                        <input type="radio" name="gen" id="female" class="rad">
+                        <label for="female" class="gender">Female</label>
+                        <input type="radio" name="gen" id="others" class="rad">
+                        <label for="others" class="gender">Others</label>
+                </div>
+                <div class="sec">
+                    <label for="dob">Enter Your Date of Birth</label>
+                    <input type="date" name="" id="">
+                </div>
+
+                <div class="sec">
+                    <label for="add">Enter Your Address</label>
+                    <textarea name="add" id="add" cols="40" rows="3"></textarea>
+                </div>
+                <button>Submit</button>
+            </fieldset>
+        </form>
+     </div>
+</body>
+</html>

@@ -1,124 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Devesh Rawat</title>
     <style>
-        *{
+        * { 
             margin: 0;
             padding: 0;
-        }
-        body{
-            height:96vh;
-            background-color:#f0f0f0;
-        }
-        .form-container{
-            border-radius:10px;
-            box-sizing: border-box;
-            margin-top:24px;
-            height:90vh;
-            width:440px;
-            margin-left: auto;
-            margin-right: auto;
-            padding:10px;
-            background-color: white;
-        }
-        form{
-            height:100%;
-        }
-        fieldset{
-            height:96%;
-            padding:10px;
-            background-color: white;
-        }
-        legend{
-            font-style: italic;
-            font-weight: 900;
-            font-size: 20px;
-            font-weight: bolder;
-
-        }
-        label{
-            font-size: 20px;
-            font-weight:48px;
-            /* display: block; */
-            /* border:1px solid red; */
-        }
-        input{
-            height:27px;
-            width:98%;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-           
             
         }
-        .sec{
-            margin:10px;
+
+        header {
+
+            position: sticky;
+            top: 0;
+            z-index: 1;
         }
-       .rad{
-        height:15px;
-        width: 15px;;
-       }
-       textarea{
-        margin:3px;
-        width:97%;
-        border: 1px solid #ccc;
-                border-radius: 4px;
-       }
-       button{
-        width:94%;
-        height:35px;
-        margin-left:12px;
-        cursor: pointer;
-       }
-       .gender{
-        margin-right:10px;
-       }
+
+        nav {
+            background-color: black;
+            display: flex;
+            /* border: 2px solid blue; */
+            height: 20vh;
+            justify-content: space-around;
+
+        }
+
+        nav>h1 {
+            font-size: 70px;
+            margin-top: auto;
+            margin-bottom: auto;
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoymhIAjPURfTGSJLnRBAZFsjSOxFmcFf9w&usqp=CAU);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ul {
+            display: flex;
+            gap: 2vw;
+
+        }
+
+        li {
+            list-style: none;
+            margin-top: auto;
+            margin-bottom: auto;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+
+        }
+        a:hover{
+            color:rgb(255, 0, 0);
+            text-shadow: 1px 1px rgb(13, 0, 255);
+            
+        }
+        
+
+        main {
+            /* border: 2px solid red; */
+            height: 215vh;
+            position:sticky;
+            top:300px;
+            
+        }
+
+        section {
+            border: 2px solid blue;
+            height: 40vh;
+            margin-top:10px;
+            margin-left:10px;
+            margin-right: 10px;
+            background-color: antiquewhite;
+            display: block;
+            border-radius:20px;
+        }
+        img{
+            float: right;
+            position: relative;
+            right:1px;
+            top:30px;
+            border:5px solid rgb(0, 0, 0);
+            margin:2px;
+            
+            border-radius:35px;
+        }
+
+        section>h1 {
+
+            font-size: 40px;
+            margin: 4px;
+            margin-top: 18px;
+            margin-left: 15px;
+
+        }
+
+        p {
+            margin: 4px;
+            margin-left: 18px;
+            font-size: 25px;
+        }
+
+        section>p {
+            color: blue;
+
+        }
+        #Gallery{
+            height:60vh;
+        }
+        .container{
+            
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .images{
+            margin: 0;
+            border:2px solid blue;
+            height:40vh;
+            width:15vw;
+            
+        }
+        #Contact{
+            height:20vh;
+            margin-bottom:10px;
+        }
+        #Contact> ul{
+            display: flex;
+            justify-content: center;
+            gap: 30px;;
+            
+        }
+        #Contact> ul>li >a{
+            color: rgb(0, 0, 255);
+        }
+        #space{
+            height:10vh;
+            display: none;
+            
+        }
+        
     </style>
 </head>
-<body>
-     <div class="form-container">
-        <form action="submit">
-            <fieldset>
-                <legend>User Personal Information</legend>
-                <div class="sec">
-                <label for="name">Enter Your Full Name</label>
-                <input type="text" name="name" id="name">
-                </div>
-                <div class="sec">
-                <label for="email">Enter Your Email</label>
-                <input type="email" name="email" id="email">
-                </div>
-                <div class="sec">
-                    <label for="pass">Enter Your Password</label>
-                    <input type="password" name="pass" id="pass">
-                </div>
-                <div class="sec">
-                    <label for="cpass">Confirm Your Password</label>
-                    <input type="password" name="cpass" id="cpass">
-                </div>
-                <div class="sec">
-                    <div><label for="gen">Enter Your Gender </label></div>
-                        <input type="radio" name="gen" id="male" class="rad">
-                        <label for="male" class="gender">Male</label>
-                        <input type="radio" name="gen" id="female" class="rad">
-                        <label for="female" class="gender">Female</label>
-                        <input type="radio" name="gen" id="others" class="rad">
-                        <label for="others" class="gender">Others</label>
-                </div>
-                <div class="sec">
-                    <label for="dob">Enter Your Date of Birth</label>
-                    <input type="date" name="" id="">
-                </div>
 
-                <div class="sec">
-                    <label for="add">Enter Your Address</label>
-                    <textarea name="add" id="add" cols="40" rows="3"></textarea>
-                </div>
-                <button>Submit</button>
-            </fieldset>
-        </form>
-     </div>
+<body>
+    <header>
+        
+        <nav class="nav-bar" id="navb">
+            <h1>Devesh Rawat</h1>
+            <ul>
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#Introduction">Education</a></li>
+                <li><a href="#Education">Experience</a></li>
+                <li><a href="#Experience">Gallery</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    
+    <main>
+        <section id="space"></section>
+        <section id="Introduction">
+            <img src="https://i.ibb.co/vsm30pw/Devphoto.jpg" alt="Not Found" width="140px">
+            <h1>My Introduction</h1>
+            <p>I'm Devesh Rawat, a first-year Computer Science student at VMSB UTU Dehradun. I love technology and enjoy
+                learning about programming, algorithms, and data structures.</p>
+                
+
+            <p>I am basically from the Biggest village "Mandar" situated in Tehri Garhwal district and currently in
+                Shyampur, Rishikesh. I'm excited to meet others who share my interests and talk about computer science.
+                It's a big field with lots of cool stuff to discover, and I'm eager to learn more and do great things!
+            </p>
+            
+
+        </section>
+        <section id="Education">
+            <h1>Education</h1>
+            <p>I am currently pursuing a Bachelor of Technology (BTech) in Computer Engineering at Uttarakhand Technical
+            University. My studies focus on areas like C programming, HTML, and Cascading Style Sheets (CSS).Before university, I completed my 12th    grade at Doon International Public School, Rishikesh, scoring
+            96.8% in Science. I developed skills in SQL, computer hardware, leadership, and Python programming.In high school at Doon International Public School, India, I achieved a 95.4% in Science.I was actively involved in sports and writing activities during this time. </p>
+        </section>
+        <section id="Experience">
+            <h1>Experience</h1>
+            <p>I have experience as the <strong>House prefect</strong> of Vidhyanchal house during my school days, where I learned valuable leadership skills and handled various responsibilities.</p>
+            <p>currently, I hold the role of student coordinator for the Counsellor Counselle Program at Uttarakhand Technical University, working alongside my co-coordinator <strong>Astha Kothiyal</strong>. Together, we strive to ensure the program's success and support our fellow counsellees in their counselling journey.</p>
+        </section>
+        <section id="Gallery">
+            <h1>Photo Gallery</h1>
+            <div class="container">
+                <img src="https://i.ibb.co/cQvr550/IMG-20240509-WA0007.jpg" alt="" class="images">
+                <img src="https://i.ibb.co/sqx0hYg/IMG-20240517-WA0017.jpg" alt="" class="images">
+                
+                <img src="https://i.ibb.co/cQJbcvR/IMG-20240517-WA0019.jpg" alt="" class="images">
+                <img src="https://i.ibb.co/p4c3JQV/IMG-20240517-WA0020.jpg" alt="" class="images">
+                <img src="https://i.ibb.co/vkJWyL2/IMG-20240517-WA0021.jpg" alt="" class="images">
+            </div>
+        </section>
+        <section id="Contact">
+            <h1>Contacts</h1>
+            <ul>
+                <li><a href="">+91 7078140054</a></li>
+                <li><a href="https://www.facebook.com/share/Fxj1wK3epiCZJNh7/?mibextid=qi2Omg" target="_blank">Facebook</a></li>
+                <li><a href="https://www.linkedin.com/in/devesh-rawat-35a50b271/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/devesh_rawat_08?utm_source=qr&igsh=MTdramFvdnpyYmFzZA==" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/devesh-rawat/MERN-Full-Stack-Development" target="_blank">GitHub</a></li>
+                <li><a href="">&copy2024 DeveshRawat</a></li>
+            </ul>
+        </section>
+    </main>
+    
+
+
+
 </body>
+
 </html>

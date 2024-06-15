@@ -1,224 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devesh Rawat</title>
+    <title>My College Blog - VMSB UTU</title>
     <style>
-        * { 
+        * {
             margin: 0;
             padding: 0;
-            
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: absolute;
+            top:100px
         }
 
         header {
-
-            position: sticky;
+            background-color: #1E90FF; /* Blue */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
             top: 0;
-            z-index: 1;
-        }
-
-        nav {
-            background-color: black;
-            display: flex;
-            /* border: 2px solid blue; */
-            height: 20vh;
-            justify-content: space-around;
+            width:100%;
 
         }
 
-        nav>h1 {
-            font-size: 70px;
-            margin-top: auto;
-            margin-bottom: auto;
-            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoymhIAjPURfTGSJLnRBAZFsjSOxFmcFf9w&usqp=CAU);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        header h1 {
+            margin-bottom: 0.5rem;
         }
 
-        ul {
-            display: flex;
-            gap: 2vw;
-
-        }
-
-        li {
+        nav ul {
             list-style: none;
-            margin-top: auto;
-            margin-bottom: auto;
-
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 30px;
-
-        }
-        a:hover{
-            color:rgb(255, 0, 0);
-            text-shadow: 1px 1px rgb(13, 0, 255);
-            
-        }
-        
-
-        main {
-            /* border: 2px solid red; */
-            height: 215vh;
-            position:sticky;
-            top:300px;
-            
-        }
-
-        section {
-            border: 2px solid blue;
-            height: 40vh;
-            margin-top:10px;
-            margin-left:10px;
-            margin-right: 10px;
-            background-color: antiquewhite;
-            display: block;
-            border-radius:20px;
-        }
-        img{
-            float: right;
-            position: relative;
-            right:1px;
-            top:30px;
-            border:5px solid rgb(0, 0, 0);
-            margin:2px;
-            
-            border-radius:35px;
-        }
-
-        section>h1 {
-
-            font-size: 40px;
-            margin: 4px;
-            margin-top: 18px;
-            margin-left: 15px;
-
-        }
-
-        p {
-            margin: 4px;
-            margin-left: 18px;
-            font-size: 25px;
-        }
-
-        section>p {
-            color: blue;
-
-        }
-        #Gallery{
-            height:60vh;
-        }
-        .container{
-            
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .images{
-            margin: 0;
-            border:2px solid blue;
-            height:40vh;
-            width:15vw;
-            
-        }
-        #Contact{
-            height:20vh;
-            margin-bottom:10px;
-        }
-        #Contact> ul{
             display: flex;
             justify-content: center;
-            gap: 30px;;
-            
         }
-        #Contact> ul>li >a{
-            color: rgb(0, 0, 255);
+
+        nav ul li {
+            margin: 0 1rem;
         }
-        #space{
-            height:10vh;
-            display: none;
-            
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
-        
+
+        .container {
+            display: flex;
+            flex: 1;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        main {
+            flex: 3;
+            margin-right: 2rem;
+        }
+
+        article {
+            margin-bottom: 2rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        article h2 {
+            margin-bottom: 0.5rem;
+            color: #1E90FF; /* Blue */
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        aside h3 {
+            margin-bottom: 0.5rem;
+            color: #B22222; /* Red */
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        aside ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #1E90FF; /* Blue */
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom:0;
+            width:100%;
+        }
     </style>
 </head>
-
 <body>
     <header>
-        
-        <nav class="nav-bar" id="navb">
-            <h1>Devesh Rawat</h1>
+        <h1>VMSB UTU Blog</h1>
+        <nav>
             <ul>
-                <li><a href="#">Introduction</a></li>
-                <li><a href="#Introduction">Education</a></li>
-                <li><a href="#Education">Experience</a></li>
-                <li><a href="#Experience">Gallery</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        
     </header>
     
-    
-    <main>
-        <section id="space"></section>
-        <section id="Introduction">
-            <img src="https://i.ibb.co/vsm30pw/Devphoto.jpg" alt="Not Found" width="140px">
-            <h1>My Introduction</h1>
-            <p>I'm Devesh Rawat, a first-year Computer Science student at VMSB UTU Dehradun. I love technology and enjoy
-                learning about programming, algorithms, and data structures.</p>
-                
-
-            <p>I am basically from the Biggest village "Mandar" situated in Tehri Garhwal district and currently in
-                Shyampur, Rishikesh. I'm excited to meet others who share my interests and talk about computer science.
-                It's a big field with lots of cool stuff to discover, and I'm eager to learn more and do great things!
-            </p>
+    <div class="container">
+        <main>
+            <article>
+                <h2>Welcome to VMSB UTU</h2>
+                <p>Veer Madho Singh Bhandari Uttarakhand Technical University (VMSB UTU) is a premier engineering and technology institute located in Uttarakhand, India. Established in 2005, the university is dedicated to providing top-notch education and promoting innovation in science and technology. With a diverse range of programs and a vibrant campus life, VMSB UTU is the perfect place to pursue your academic and professional goals.</p>
+            </article>
+            <article>
+                <h2>Our Campus Life</h2>
+                <p>Our campus is not just about academics; it's a place where students can grow, explore, and create lifelong memories. From annual fests and sports events to tech clubs and cultural activities, there is always something happening at VMSB UTU. Join us and be a part of a dynamic community that encourages creativity, leadership, and personal growth.</p>
+            </article>
+            <article>
+                <h2>Academic Excellence</h2>
+                <p>At VMSB UTU, we strive for academic excellence through a rigorous curriculum, experienced faculty, and state-of-the-art facilities. Our programs are designed to equip students with the knowledge and skills needed to succeed in their respective fields. We also offer various research opportunities and industry collaborations to ensure our students are well-prepared for the challenges of the modern world.</p>
+            </article>
+            <article>
+                <h2>My Journey at VMSB UTU</h2>
+                <p>I'm Devesh Rawat, a first-year Computer Science student at VMSB UTU. I chose this university because of its strong focus on technology and innovation. So far, my experience has been incredible, from the engaging lectures and hands-on projects to the supportive faculty and vibrant student community. I'm looking forward to the many opportunities and experiences that lie ahead.</p>
+            </article>
+            <article>
+                <h2>Exciting Events and Activities</h2>
+                <p>VMSB UTU hosts a variety of events and activities throughout the year, from technical workshops and hackathons to cultural fests and sports tournaments. These events provide a great platform for students to showcase their talents, learn new skills, and network with peers and industry professionals. Recently, I had the privilege of hosting the Counsellor Counselle Program inauguration as the Student Coordinator, which was a fantastic experience.</p>
+            </article>
+        </main>
+        
+        <aside>
+            <h3>About Me</h3>
+            <p>I'm Devesh Rawat, a first-year Computer Science student at VMSB UTU. Passionate about technology and programming, I created this blog to share my experiences and insights about our wonderful university.</p>
             
-
-        </section>
-        <section id="Education">
-            <h1>Education</h1>
-            <p>I am currently pursuing a Bachelor of Technology (BTech) in Computer Engineering at Uttarakhand Technical
-            University. My studies focus on areas like C programming, HTML, and Cascading Style Sheets (CSS).Before university, I completed my 12th    grade at Doon International Public School, Rishikesh, scoring
-            96.8% in Science. I developed skills in SQL, computer hardware, leadership, and Python programming.In high school at Doon International Public School, India, I achieved a 95.4% in Science.I was actively involved in sports and writing activities during this time. </p>
-        </section>
-        <section id="Experience">
-            <h1>Experience</h1>
-            <p>I have experience as the <strong>House prefect</strong> of Vidhyanchal house during my school days, where I learned valuable leadership skills and handled various responsibilities.</p>
-            <p>currently, I hold the role of student coordinator for the Counsellor Counselle Program at Uttarakhand Technical University, working alongside my co-coordinator <strong>Astha Kothiyal</strong>. Together, we strive to ensure the program's success and support our fellow counsellees in their counselling journey.</p>
-        </section>
-        <section id="Gallery">
-            <h1>Photo Gallery</h1>
-            <div class="container">
-                <img src="https://i.ibb.co/cQvr550/IMG-20240509-WA0007.jpg" alt="" class="images">
-                <img src="https://i.ibb.co/sqx0hYg/IMG-20240517-WA0017.jpg" alt="" class="images">
-                
-                <img src="https://i.ibb.co/cQJbcvR/IMG-20240517-WA0019.jpg" alt="" class="images">
-                <img src="https://i.ibb.co/p4c3JQV/IMG-20240517-WA0020.jpg" alt="" class="images">
-                <img src="https://i.ibb.co/vkJWyL2/IMG-20240517-WA0021.jpg" alt="" class="images">
-            </div>
-        </section>
-        <section id="Contact">
-            <h1>Contacts</h1>
+            <h3>Categories</h3>
             <ul>
-                <li><a href="">+91 7078140054</a></li>
-                <li><a href="https://www.facebook.com/share/Fxj1wK3epiCZJNh7/?mibextid=qi2Omg" target="_blank">Facebook</a></li>
-                <li><a href="https://www.linkedin.com/in/devesh-rawat-35a50b271/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/devesh_rawat_08?utm_source=qr&igsh=MTdramFvdnpyYmFzZA==" target="_blank">Instagram</a></li>
-                <li><a href="https://github.com/devesh-rawat/MERN-Full-Stack-Development" target="_blank">GitHub</a></li>
-                <li><a href="">&copy2024 DeveshRawat</a></li>
+                <li><a href="#">Campus News</a></li>
+                <li><a href="#">Student Life</a></li>
+                <li><a href="#">Academic Programs</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Research</a></li>
             </ul>
-        </section>
-    </main>
+        </aside>
+    </div>
     
-
-
-
+    <footer>
+        <p>&copy; 2024 VMSB UTU Blog</p>
+    </footer>
 </body>
-
 </html>
