@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007bff; /* Blue */
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #0056b3; /* Darker Blue */
+        }
+        .header-title {
+            margin: 0;
+            font-size: 2.5em;
+            color: #fff;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f9fa; /* Light Gray */
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2em;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 1.5em;
+            }
+        }
+        .about, .contact {
+            padding: 20px;
+            text-align: center;
+            background-color: #007bff; /* Blue */
+            color: #fff;
+        }
+        .about h2, .contact h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .about p, .contact p {
+            color: #f8f9fa; /* Light Gray */
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact input, .contact textarea, .contact button {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact input, .contact textarea {
+            background-color: #fff;
+        }
+        .contact button {
+            background-color: #dc3545; /* Red */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact button:hover {
+            background-color: #c82333; /* Darker Red */
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Dev Photography</h1>
+    </header>
+    <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="gallery" id="gallery">
+        <a href="#img1"><img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 1"></a>
+        <a href="#img2"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 2"></a>
+        <a href="#img3"><img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 3"></a>
+        <a href="#img4"><img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 4"></a>
+        <a href="#img5"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 2"></a>
+        <a href="#img6"><img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 3"></a>
+    </div>
+    <div class="about" id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a professional photographer with a passion for capturing moments that tell stories. From landscapes to portraits, I strive to create images that are not only beautiful but also meaningful.</p>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please fill out the form below:</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Dev Photography. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox for viewing images -->
+    <div id="img1" class="lightbox">
+        <a href="#gallery" class="close">&times;</a>
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#gallery" class="close">&times;</a>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#gallery" class="close">&times;</a>
+        <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 3">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#gallery" class="close">&times;</a>
+        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 4">
+    </div>
+    <div id="img5" class="lightbox">
+        <a href="#gallery" class="close">&times;</a>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 2">
+    </div>
+    <div id="img6" class="lightbox">
+        <a href="#gallery" class="close">&times;</a>
+       <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo 4">
+    </div>
+</body>
+</html>
